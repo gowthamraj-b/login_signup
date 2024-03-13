@@ -22,6 +22,7 @@ const App = () => {
     setRegisteredUsers(updatedUsers);
     localStorage.setItem('registeredUsers', JSON.stringify(updatedUsers));
     console.log('User Registered:', newUser);
+    alert('User Registered Successfully');
   };
 
   const handleLogin = (credentials) => {
@@ -32,8 +33,10 @@ const App = () => {
       // Set the logged-in user
       setLoggedInUser(user);
       console.log('User Logged In:', user);
+      alert('User Logged In');
     } else {
       console.log('Invalid Credentials');
+      alert('Invalid Credentials');
     }
   };
 
@@ -57,6 +60,7 @@ const App = () => {
     // Clear the logged-in user
     setLoggedInUser(null);
     console.log('User Logged Out');
+    alert('User Logged Out');
   };
 
   const toggleFormMode = () => {
